@@ -17,14 +17,14 @@ class InvoiceItemTest < Minitest::Test
   def test_it_exists
     assert_instance_of InvoiceItem, @ii
   end
-  
-  # def test_attributes
-  #   assert_equal 6, @ii.id
-  #   assert_equal 7, @ii.customer_id
-  #   assert_equal 8, @ii.merchant_id
-  #   assert_equal 1, @ii.quantity
-  #   assert_equal BigDecimal.new(10.99, 4), @ii.unit_price
-  #   assert_instance_of Time, @ii.created_at
-  #   assert_instance_of Time, @ii.updated_at
-  # end
+
+  def test_attributes
+    assert_equal 6, @ii.id
+    assert_equal 7, @ii.item_id
+    assert_equal 8, @ii.invoice_id
+    assert_equal 1, @ii.quantity
+    assert_instance_of Time, @ii.created_at
+    assert_instance_of Time, @ii.updated_at
+    # assert_equal BigDecimal.new(10.99, 4), @ii.unit_price
+  end
 end
